@@ -42,7 +42,7 @@ binary = b64d(base64text)
 ## Get solution
 f = open("level2.elf", "wb")
 f.write(binary)
-os.system("objdump -zd level2.elf --disassemble-symbols=validate --print-imm-hex | grep cmp | grep -o '0x..' | cut -c 3- > hexvals3.txt")
+os.system("objdump -zd level2.elf --disassemble=validate | grep cmp | grep -o '0x..' | cut -c 3- > hexvals3.txt")
 
 lev2str = ''
 with open("hexvals3.txt", "r") as fp:
@@ -67,7 +67,7 @@ binary = b64d(base64text)
 ## Get solution
 f = open("level3.elf", "wb")
 f.write(binary)
-os.system("objdump -zd level3.elf --disassemble-symbols=validate --print-imm-hex | grep cmp | grep -o '0x..' | cut -c 3- > hexvals3.txt")
+os.system("objdump -zd level3.elf --disassemble=validate | grep cmp | grep -o '0x..' | cut -c 3- > hexvals3.txt")
 
 lev3str = ''
 with open("hexvals3.txt", "r") as fp:
@@ -94,7 +94,7 @@ binary = b64d(base64text)
 ## Get solution
 f = open("level4.elf", "wb")
 f.write(binary)
-os.system("objdump -zd level4.elf --disassemble-symbols=validate --print-imm-hex | grep cmp | grep -o '0x..' | cut -c 3- > hexvals4.txt") 
+os.system("objdump -zd level4.elf --disassemble=validate | grep cmp | grep -o '0x..' | cut -c 3- > hexvals4.txt") 
 
 os.system("java Solve 4 < hexvals4.txt | tail -1 > level4.txt")    
 
@@ -121,8 +121,8 @@ binary = b64d(base64text)
 f = open("level5.elf", "wb")
 f.write(binary)
 
-os.system("objdump -zd level5.elf --disassemble-symbols=validate --print-imm-hex | grep cmp | grep -o '0x..' | cut -c 3- > hexvals5.txt") 
-os.system("objdump -zd level5.elf --disassemble-symbols=validate --print-imm-hex | grep -Eo 'cmp|add' > grep5.txt")   
+os.system("objdump -zd level5.elf --disassemble=validate | grep cmp | grep -o '0x..' | cut -c 3- > hexvals5.txt") 
+os.system("objdump -zd level5.elf --disassemble=validate | grep -Eo 'cmp|add' > grep5.txt")   
 os.system("./level5-solver hexvals5.txt grep5.txt 2>debug5.txt | tail -1 > level5.txt")
 
 f = open("level5.txt", "r")
@@ -150,8 +150,8 @@ binary = b64d(base64text)
 f = open("level6.elf", "wb")
 f.write(binary)
 
-os.system("objdump -zd level6.elf --disassemble-symbols=validate --print-imm-hex | grep cmp | grep -o '0x..' | cut -c 3- > hexvals6.txt") 
-os.system("objdump -zd level6.elf --disassemble-symbols=validate --print-imm-hex | grep -Eo 'cmp|add' > grep6.txt")   
+os.system("objdump -zd level6.elf --disassemble=validate | grep cmp | grep -o '0x..' | cut -c 3- > hexvals6.txt") 
+os.system("objdump -zd level6.elf --disassemble=validate | grep -Eo 'cmp|add' > grep6.txt")   
 os.system("./level5-solver hexvals6.txt grep6.txt 2>debug6.txt | tail -1 > level6.txt")
 
 f = open("level6.txt", "r")
