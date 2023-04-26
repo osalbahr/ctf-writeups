@@ -1,9 +1,11 @@
 # Challenge Name: Speed-Rev: Bots
 ***
 
-## Co-Authors
+## Authors
 
-The solution and writeup was a collaboration with [ccrollin](https://ctftime.org/user/84127) and [mmtawous](https://ctftime.org/user/159303).
+Author: [osalbahr](https://ctftime.org/user/158966)
+
+Co-Authors: The solution and writeup was a collaboration with [ccrollin](https://ctftime.org/user/84127) and [mmtawous](https://ctftime.org/user/159303).
 
 ***
 
